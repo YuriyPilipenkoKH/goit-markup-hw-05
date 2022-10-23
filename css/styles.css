@@ -396,8 +396,13 @@ a:active, a:focus { outline: none; }
     height: 44px;
     color: var(--color-third);
     background: var(--main-background);
-    
     border-radius: 50%;
+
+    transition-property: color;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function:
+     cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .icon-social {
@@ -407,7 +412,7 @@ a:active, a:focus { outline: none; }
 }
 .social-link:hover,
 .social-link:focus {
-    background: var(--button);
+    background-color: var(--button);
 
 }
 .social-link:hover svg,
