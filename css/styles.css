@@ -439,13 +439,18 @@ a:active, a:focus { outline: none; }
 .clients-item {
 
     flex-basis: calc((100% - 5 * 30px)/ 6);
- 
+    
 }
 
 .icon-clients {
     min-width: 165px;
     height: 80px;
     color: var(--color-third); 
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function:
+     cubic-bezier(0.4, 0, 0.2, 1); 
 
 }
 
@@ -457,6 +462,14 @@ a:active, a:focus { outline: none; }
     border: 1px solid var(--color-third);
     border-radius: 4px;
 
+    transition-property: border-color;
+    transition-duration: 250ms;
+    transition-timing-function:
+     cubic-bezier(0.4, 0, 0.2, 1); 
+
+}
+.clients-link {
+   
 }
 
 .clients-link:hover svg,
@@ -489,21 +502,19 @@ a:active, a:focus { outline: none; }
     letter-spacing: 0.03em;  
     color: var(--main-background);
 }
-.mail {
-    font-style: normal;
-    font-size: 14px;
-    line-height: 1.71;
-    text-decoration: none;
-    letter-spacing: 0.03em;
-    color: var(--mail);
-}
+.mail,
 .tel {
-    font-style: normal;
+
     font-size: 14px;
     line-height: 1.71;
     text-decoration: none;
     letter-spacing: 0.03em;
     color: var(--mail);
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function:
+     cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .address-item:not(:last-child) {
@@ -543,16 +554,21 @@ a:active, a:focus { outline: none; }
     height: 44px;
     background: var(--footer-social);
     border-radius: 50%;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function:
+     cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-social {
     width: 44px;
     height: 44px;
     color: var(--main-background);
-  
+    
 }
 .footer-social-link:hover,
 .footer-social-link:focus {
-    background: var(--button);
+    background-color: var(--button);
 
 }
 
@@ -599,6 +615,7 @@ a:active, a:focus { outline: none; }
     transition-property: color;
     transition-property: var(--box-shadow-third);
     transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .button-list .radio-button + .radio-button {
