@@ -49,7 +49,7 @@ h1,h2,h3,p,ul {
     margin-top: 0;
     margin-bottom: 0;
 }
-a>img {
+div>img {
     display: block;
 }
 
