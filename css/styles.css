@@ -615,17 +615,17 @@ a:active, a:focus { outline: none; }
 
 }
 .flex-element {
-    
     display: flex;
     flex-basis: calc((100% - 2 * 30px)/ 3);
     
-   
 }
 
 .image-item {
     position: relative;
-    
-    text-decoration: none; 
+    text-decoration: none;
+    transition-property: var(--box-shadow-fourth);
+    transition-duration: 250ms;
+
 }
 
 
@@ -658,7 +658,8 @@ a:active, a:focus { outline: none; }
     transition: transform 250ms
      cubic-bezier(0.4, 0, 0.2, 1);
 }
-.flex-element:hover .picture::after {
+.flex-element:hover .picture::after,
+.flex-element:focus .picture::after {
     transform: translateY(0);
 }
 /* cue */
