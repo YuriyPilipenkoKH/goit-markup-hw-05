@@ -808,7 +808,7 @@ a:active, a:focus { outline: none; }
     border-right: 1px solid var(--image-border);
     border-bottom: 1px solid var(--image-border); 
 }
-
+/*modal*/
 .backdrop {
     position: fixed;
     top: 0;
