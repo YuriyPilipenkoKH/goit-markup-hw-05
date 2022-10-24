@@ -834,6 +834,7 @@ a:active, a:focus { outline: none; }
     transform: translate(-50%, -50%);
 }
 .modal-shut {
+   
     position: absolute;
     top: 8px;
     right: 8px;
@@ -842,10 +843,12 @@ a:active, a:focus { outline: none; }
     background-color: var(--main-background);
     border-radius: 50%;
     border: 1px solid var(--cross);
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
 
 }
 .cross {
     width: 11px;
     height: 11px;
-    fill: #000000;
 }
