@@ -154,8 +154,7 @@ a:active, a:focus { outline: none; }
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic);
 
 }
 .nav-link {
@@ -258,8 +257,7 @@ a:active, a:focus { outline: none; }
 
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic);
 }
 .order-button:hover,
 .order-button:focus {
@@ -342,21 +340,15 @@ a:active, a:focus { outline: none; }
 }
 
 .work-item {
+    position: relative;
     display: flex;
+
 }
 .work-list .work-item + .work-item {
     margin-left: 30px;
 }
 
-.desctop-apps,
-.mobile-apps,
-.designer-solutions {
-    position: relative;
-    overflow: hidden;
-}
-.desctop-apps::after {
-    display: inline-block;
-    content: "Десктопні додатки";
+.work-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -373,48 +365,6 @@ a:active, a:focus { outline: none; }
     text-transform: uppercase;
     color: var(--main-background);  
     padding-top: 27px;  
-}
-.mobile-apps::after {
-    display: inline-block;
-    content: "Мобільні додатки";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 24%;
-    background-color: var(--design);
-
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--main-background);  
-    padding-top: 27px;
-
-}
-.designer-solutions::after {
-    display: inline-block;
-    content: "Дизайнерські рішення";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 24%;
-    background-color: var(--design);
-
-    font-family: inherit;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 16px;
-    text-align: center;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
-    color: var(--main-background);  
-    padding-top: 27px;
-
 }
 
 /*team*/
@@ -494,8 +444,7 @@ a:active, a:focus { outline: none; }
     transition-property: color;
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic);
 
 }
 .icon-social {
@@ -532,12 +481,9 @@ a:active, a:focus { outline: none; }
     justify-content: center;
     align-items: center;
     gap: 30px;
-    
 }
 .clients-item {
-
     flex-basis: calc((100% - 5 * 30px)/ 6);
-    
 }
 
 .icon-clients {
@@ -547,9 +493,7 @@ a:active, a:focus { outline: none; }
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1); 
-
+    transition-timing-function: var(--cubic); 
 }
 
 .box {
@@ -562,14 +506,8 @@ a:active, a:focus { outline: none; }
 
     transition-property: border-color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1); 
-
+    transition-timing-function: var(--cubic); 
 }
-.clients-link {
-   
-}
-
 .clients-link:hover svg,
 .clients-link:focus svg {
     color: var(--button);
@@ -578,8 +516,6 @@ a:active, a:focus { outline: none; }
 .clients-link:focus .box { 
     border-color: var(--button);
 }
-
-
 /*footer*/
 .footer {   
     background: var(--footer);
@@ -602,6 +538,7 @@ a:active, a:focus { outline: none; }
 }
 .mail,
 .tel {
+    font-style: normal;
 
     font-size: 14px;
     line-height: 1.71;
@@ -611,13 +548,11 @@ a:active, a:focus { outline: none; }
 
     transition-property: color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic);
 }
 
 .address-item:not(:last-child) {
     margin-bottom: 9px;
-
 }
 
 .mail:hover,
@@ -655,8 +590,7 @@ a:active, a:focus { outline: none; }
 
     transition-property: background-color;
     transition-duration: 250ms;
-    transition-timing-function:
-     cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: var(--cubic);
 }
 .footer-social {
     width: 44px;
@@ -746,9 +680,7 @@ a:active, a:focus { outline: none; }
     transition-property: var(--box-shadow-fourth);
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
-
 }
-
 
 /* cue */
 .picture {
@@ -783,34 +715,6 @@ a:active, a:focus { outline: none; }
     padding: 63px 24px;
 
 }
-
-
-/*   overflow: hidden;*/
-
-/* .picture::after {
-    
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--cue);
-
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 28px;
-    letter-spacing: 0.03em;   
-    color: var(--main-background);
-    padding: 63px 24px;
-
-    transform: translateY(100%);
-    transition: transform 250ms
-    var(--cubic);
-}
-.image-item:hover .product-overlay,
-.image-item:focus .product-overlay {
-    transform: translateY(0);
-} */
 /* cue */
 .image-item:hover,     
 .image-item:focus {
@@ -848,7 +752,7 @@ a:active, a:focus { outline: none; }
     background-color: var(--backdrop);
 
     opacity: 1;
-    transition: opacity 3000ms var(--cubic);
+    transition: opacity 1600ms var(--cubic);
 }
 .is-hidden {
     opacity: 0;
@@ -869,9 +773,8 @@ a:active, a:focus { outline: none; }
     left: 50%;
     transform: translate(-50%, -50%)
      scale(1);
-    transition: transform 3000ms var(--cubic);
+    transition: transform 1600ms var(--cubic);
 
-    
 }
 .modal-shut {
    
