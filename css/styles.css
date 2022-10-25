@@ -676,6 +676,7 @@ a:active, a:focus { outline: none; }
 .image-item {
     position: relative;
     text-decoration: none;
+    
     transition-property: box-shadow;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
