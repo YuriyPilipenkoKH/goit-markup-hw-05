@@ -160,25 +160,25 @@ a:active, a:focus { outline: none; }
 .nav-link {
     color: var(--main-color); 
 }
-.contacts-item {
-    
-}
 
 /* Thin blue line */
 .nav .current {
-    
-    flex-direction: column;
+    position: relative;
+   
     padding-top: 32px;
-    padding-bottom: 0;
+    padding-bottom: 28px;
 
 }   
 .nav .current::after {
+    position: absolute;
+    bottom: -2px;
 
     content: "";
     height: 4px;
+    width: 100%;
     background-color: var(--button);
     border-radius: 4px;
-    margin-top: 28px;
+
 }
 /* Thin blue line */
    
