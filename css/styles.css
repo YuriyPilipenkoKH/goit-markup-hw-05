@@ -202,11 +202,16 @@ a:active, a:focus { outline: none; }
 .icon-smartphone {
     display: block;
     height: auto;
+    fill: var(--contact);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
   
 }
 .contacts-link:hover svg,
 .contacts-link:focus svg { 
-    color: var(--button);
+    fill: var(--button);
 }
 
 
@@ -441,32 +446,40 @@ a:active, a:focus { outline: none; }
    
 }
 .social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
     width: 44px;
     height: 44px;
-    color: var(--color-third);
+    
     background: var(--main-background);
     border-radius: 50%;
 
-    transition-property: background-color, color;
+    transition-property: background-color;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic);
 
 }
 .icon-social {
-    width: 44px;
-    height: 44px;
+    width: 20px;
+    height: 20px;
+    fill: var(--contact);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: var(--cubic);
+
      
 }
 .social-link:hover,
 .social-link:focus {
     background-color: var(--button);
-    color: var(--main-background);
-
+   
 }
 .social-link:hover svg,
 .social-link:focus svg {
-    color: var(--main-background);
+    fill: var(--main-background);
     
 } 
 /*clients*/
@@ -496,9 +509,9 @@ a:active, a:focus { outline: none; }
 .icon-clients {
     min-width: 165px;
     height: 80px;
-    color: var(--color-third); 
+    fill: var(--color-third); 
 
-    transition-property: color;
+    transition-property: fill;
     transition-duration: 250ms;
     transition-timing-function: var(--cubic); 
 }
@@ -517,7 +530,7 @@ a:active, a:focus { outline: none; }
 }
 .clients-link:hover svg,
 .clients-link:focus svg {
-    color: var(--button);
+    fill: var(--button);
 }
 .clients-link:hover, 
 .clients-link:focus { 
@@ -589,6 +602,9 @@ a:active, a:focus { outline: none; }
 }
 
 .footer-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     
     width: 44px;
     height: 44px;
@@ -600,9 +616,9 @@ a:active, a:focus { outline: none; }
     transition-timing-function: var(--cubic);
 }
 .footer-social {
-    width: 44px;
-    height: 44px;
-    color: var(--main-background);
+    width: 20px;
+    height: 20px;
+    fill: var(--main-background);
     
 }
 .footer-social-link:hover,
@@ -783,6 +799,9 @@ a:active, a:focus { outline: none; }
 
 }
 .modal-shut {
+    display: flex;
+    align-items: center;
+    justify-content: center;
    
     position: absolute;
     top: 8px;
@@ -800,4 +819,5 @@ a:active, a:focus { outline: none; }
 .cross {
     width: 11px;
     height: 11px;
+    fill: var(--logo2);
 }
