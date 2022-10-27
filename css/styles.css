@@ -817,7 +817,6 @@ a:active, a:focus { outline: none; }
 
 }
 .cross {
-    width: 11px;
-    height: 11px;
+
     fill: var(--logo2);
 }
