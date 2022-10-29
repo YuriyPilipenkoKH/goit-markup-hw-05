@@ -665,12 +665,9 @@ a:active, a:focus { outline: none; }
     cursor: pointer;
 
     transition-property: background-color, color, box-shadow;
-    transition-duration: 250ms;
+    transition-duration: 4250ms;
     transition-timing-function: var(--cubic);
 
-}
-.button-list .radio-button + .radio-button {
-    margin-left: 8px;
 }
 
 .menu-button:hover,
@@ -679,6 +676,9 @@ a:active, a:focus { outline: none; }
     color: var(--main-background);
     box-shadow: var(--box-shadow-third);
 }   
+.button-list .radio-button + .radio-button {
+    margin-left: 8px;
+}
 
 
 .flex-container {
